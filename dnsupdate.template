@@ -1,0 +1,51 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# dnsupdate.template - SAFE VERSION with webhook placeholder
+
+cd ~/blocklist || exit 1
+
+# Move input file from Downloads if it exists
+if [ -f /sdcard/Download/input_blocked_domains.txt ]; then
+  mv /sdcard/Download/input_blocked_domains.txt ~/blocklist/
+fi
+
+input_file="input_blocked_domains.txt"
+master_file="adhell3_blocklist_from_nextdns.txt"
+
+# Check if input file exists and is not empty
+if [ ! -s "$input_file" ]; then
+  termux-toast -g bottom -s "⚠️ No domains to update."
+  echo "No new domains to process."
+  exit 0
+fi
+
+# Deduplicate and append new domains
+while read -r domain; do
+  if ! grep -Fxq "0.0.0.0 $domain" "$master_file"; then
+    echo "0.0.0.0 $domain" >> "$master_file"
+  fi
+done < "$input_file"
+
+# Clear input file after processing
+> "$input_file"
+
+# Count and timestamp
+count=$(grep -c "^0.0.0.0" "$master_file")
+timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+
+# Git commit and push
+git add "$master_file"
+git commit -m "Delta update at $timestamp with $count total domains"
+git push
+
+# ===== IMPORTANT =====
+# REPLACE THIS WITH YOUR OWN DISCORD WEBHOOK
+webhook_url="https://discord.com/api/webhooks/REPLACE_ME"
+
+# Discord webhook status message
+if [ $? -eq 0 ]; then
+  curl -H "Content-Type: application/json" -X POST -d '{ "content": "✅ Delta update complete at **'"$timestamp"'** with **'"$count"'** total domains in blocklist." }' "$webhook_url"
+  termux-toast -g bottom -s "✅ DNS update complete and pushed!"
+else
+  curl -H "Content-Type: application/json" -X POST -d '{ "content": "❌ Delta update failed at **'"$timestamp"'**. Check Termux logs." }' "$webhook_url"
+  termux-toast -g bottom -s "❌ DNS update failed. Check logs."
+fi
