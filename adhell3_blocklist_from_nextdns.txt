@@ -4,4 +4,17 @@
 0.0.0.0 mobile.events.data.microsoft.com
 0.0.0.0 mobile.pipe.aria.microsoft.com
 0.0.0.0 o1069899.ingest.sentry.io
+0.0.0.0 o33249.ingest.sentry.io0.0.0.0 3.datadog.pool.ntp.org
+0.0.0.0 2.datadog.pool.ntp.org
+0.0.0.0 1.datadog.pool.ntp.org
+0.0.0.0 0.datadog.pool.ntp.org
+0.0.0.0 3.datadog.pool.ntp.org
+0.0.0.0 o64374.ingest.sentry.io
+0.0.0.0 browser-intake-datadoghq.com
+0.0.0.0 beacons5.gvt3.com
+0.0.0.0 firebaselogging-pa.googleapis.com
+0.0.0.0 samsung.appnext.com
+0.0.0.0 mirror.quantum5.ca
 0.0.0.0 o33249.ingest.sentry.io
+0.0.0.0 browser.events.data.microsoft.com
+0.0.0.0 mobile.events.data.microsoft.com3.datadog.pool.ntp.org
