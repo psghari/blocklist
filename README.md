@@ -1,6 +1,10 @@
 # Mobile DNS Blocklist Automation (Hari's Setup)
 
-A complete Termux-powered, GitHub-synced, Discord-notifying DNS blocklist automation pipeline that runs directly from an Android device—no root, no PC needed.
+> **WARNING – READ FIRST**
+>
+> 1. This repo includes a `dnsupdate.template` script – you **must copy it** and rename it to `dnsupdate` before use.
+> 2. You MUST replace the dummy Discord webhook URL (`https://discord.com/api/webhooks/REPLACE_ME`) with your **own**. If you don't, your updates will fail or worse – go to someone else's Discord.
+> 3. The actual working script (`dnsupdate`) is ignored via `.gitignore` for security. Keep your version local and private.
 
 ---
 
@@ -49,28 +53,33 @@ A complete Termux-powered, GitHub-synced, Discord-notifying DNS blocklist automa
 
 ## Discord Webhook Setup
 
+> **IMPORTANT:** You must replace the webhook URL placeholder in `dnsupdate.template`:
+> ```bash
+> webhook_url="https://discord.com/api/webhooks/REPLACE_ME"
+> ```
+> Replace it with your own webhook from your Discord server settings.
+
 1. Go to your Discord server → Settings → Integrations → Webhooks
 2. Click **"New Webhook"** and copy the URL
-3. In your script (`dnsupdate`), update the webhook line:
-   ```bash
-   curl -H "Content-Type: application/json" -X POST -d '{ "content": ... }' https://discord.com/api/webhooks/XXXX/YYY
-   ```
+3. Update the script (`dnsupdate`) after copying from the template
 
 ---
 
 ## Script Setup
 
-1. Save the script as `dnsupdate` in:
-   ```
-   ~/.shortcuts/
-   ```
-   or create it with:
+1. Copy the template:
    ```bash
-   nano ~/.shortcuts/dnsupdate
+   cp dnsupdate.template dnsupdate
    ```
+   Then edit:
+   ```bash
+   nano dnsupdate
+   ```
+   → Replace the webhook URL as mentioned above.
 
-2. Make it executable:
+2. Move it to the Termux shortcuts folder:
    ```bash
+   mv dnsupdate ~/.shortcuts/
    chmod +x ~/.shortcuts/dnsupdate
    ```
 
@@ -109,9 +118,11 @@ dnsupdate
 
 | File | Purpose |
 |------|---------|
-| `dnsupdate` | Main script that moves, dedupes, updates, and reports |
+| `dnsupdate.template` | Safe version of script with webhook placeholder |
 | `adhell3_blocklist_from_nextdns.txt` | Your deduplicated master list |
 | `input_blocked_domains.txt` | (Temporary) new domains copied from NextDNS logs |
+| `.gitignore` | Prevents your real `dnsupdate` from being pushed by mistake |
+| `README.md` | You’re reading it—don’t skip it again, meathead |
 
 ---
 
@@ -135,7 +146,7 @@ dnsupdate
 
 ---
 
-## Optional: Logging (Future Add-On)
+## Optional: Logging
 
 Want to log every run to a file? Add this at the bottom of your script:
 ```bash
