@@ -41,13 +41,45 @@
 
 ---
 
-## GitHub Setup
+## GitHub Setup (Clone, Commit & Push)
 
-1. Create a new repo (e.g. `blocklist`)
-2. Clone it in Termux:
+1. Create a GitHub repo called `blocklist` (or any name you like)
+2. Clone it into Termux:
    ```bash
    git clone https://github.com/YOUR_USERNAME/blocklist.git ~/blocklist
    ```
+3. Set your Git identity:
+   ```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "you@example.com"
+   ```
+4. When ready to push:
+   ```bash
+   cd ~/blocklist
+   git add .
+   git commit -m "Your message"
+   git push
+   ```
+5. Use a **Personal Access Token (PAT)** as your GitHub password when prompted
+
+---
+
+## Setting Up NextDNS for This Pipeline
+
+1. Go to [https://my.nextdns.io](https://my.nextdns.io) and sign in or create an account
+2. Create a new configuration
+3. Enable logging:
+   - Go to `Settings > Logs`
+   - Set **Log Retention** (e.g. 1 or 2 weeks)
+4. When you're ready to update:
+   - Visit the **Logs** tab
+   - Filter by **Status: Blocked**
+   - Scroll down and **copy domain names**
+   - Paste into a file called:
+     ```
+     /sdcard/Download/input_blocked_domains.txt
+     ```
+   - One domain per line, no formatting needed
 
 ---
 
@@ -99,7 +131,6 @@
   ```
   /sdcard/Download/input_blocked_domains.txt
   ```
-  - One domain per line, no formatting
 
 ### **Step 2: Trigger Update**
 
@@ -157,4 +188,7 @@ echo "$timestamp - Updated $count domains" >> ~/blocklist/update.log
 
 ## Credits
 
-Custom pipeline built by Hari with ChatGPT-4 assistance. Precision-engineered on Android.
+This setup was built and battle-tested by **Hari**, with automation, scripting, and profanity-ready optimization from **ChatGPT-4**.  
+If you break it, you buy it.  
+If you clone it, don't be an idiot—replace the webhook.
+
