@@ -49,6 +49,7 @@
 0.0.0.0 dc.dqa.samsung.com
 0.0.0.0 default.exp-tas.com
 0.0.0.0 device-metrics-us.amazon.com
+0.0.0.0 digibites.nl
 0.0.0.0 dit.whatsapp.net
 0.0.0.0 dpm.demdex.net
 0.0.0.0 e.reddit.com
@@ -91,6 +92,7 @@
 0.0.0.0 mobile.events.data.microsoft.com3.datadog.pool.ntp.org
 0.0.0.0 mobile.pipe.aria.microsoft.com
 0.0.0.0 mobile.pipe.aria.microsoft.com
+0.0.0.0 msh.amazon.co.uk
 0.0.0.0 o1069899.ingest.sentry.io
 0.0.0.0 o1069899.ingest.sentry.io
 0.0.0.0 o33249.ingest.sentry.io
@@ -105,9 +107,11 @@
 0.0.0.0 samsung.appnext.com
 0.0.0.0 sdk-03.moengage.com
 0.0.0.0 sdk-03.moengage.com
+0.0.0.0 sdk.pushmessage.samsung.com
 0.0.0.0 searchpromo-pa.googleapis.com
 0.0.0.0 searchpromo-pa.googleapis.com
 0.0.0.0 secure.quantserve.com
+0.0.0.0 sentry.io
 0.0.0.0 shealth-analytics-api.samsunghealth.com
 0.0.0.0 shealth-analytics-api.samsunghealth.com
 0.0.0.0 ssl.google-analytics.com
