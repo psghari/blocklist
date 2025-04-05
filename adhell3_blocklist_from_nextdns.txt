@@ -88,7 +88,8 @@
 0.0.0.0 mobile-collector.newrelic.com
 0.0.0.0 mobile.events.data.microsoft.com
 0.0.0.0 mobile.events.data.microsoft.com
-0.0.0.0 mobile.events.data.microsoft.com3.datadog.pool.ntp.org
+0.0.0.0 mobile.events.data.microsoft.com
+0.0.0.0 3.datadog.pool.ntp.org
 0.0.0.0 mobile.pipe.aria.microsoft.com
 0.0.0.0 mobile.pipe.aria.microsoft.com
 0.0.0.0 o1069899.ingest.sentry.io
