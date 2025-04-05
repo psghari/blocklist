@@ -89,10 +89,15 @@
 0.0.0.0 mobile-collector.newrelic.com
 0.0.0.0 mobile.events.data.microsoft.com
 0.0.0.0 mobile.events.data.microsoft.com
-0.0.0.0 mobile.events.data.microsoft.com3.datadog.pool.ntp.org
+0.0.0.0 mobile.events.data.microsoft.com
+0.0.0.0 3.datadog.pool.ntp.org
 0.0.0.0 mobile.pipe.aria.microsoft.com
 0.0.0.0 mobile.pipe.aria.microsoft.com
+<<<<<<< HEAD
 0.0.0.0 msh.amazon.co.uk
+0.0.0.0 o1069899.ingest.sentry.io
+=======
+>>>>>>> b97c4be88a5d17af9e9f5d6278692922f147eab9
 0.0.0.0 o1069899.ingest.sentry.io
 0.0.0.0 o1069899.ingest.sentry.io
 0.0.0.0 o33249.ingest.sentry.io
@@ -106,12 +111,19 @@
 0.0.0.0 samsung.appnext.com
 0.0.0.0 samsung.appnext.com
 0.0.0.0 sdk-03.moengage.com
-0.0.0.0 sdk-03.moengage.com
+<<<<<<< HEAD
 0.0.0.0 sdk.pushmessage.samsung.com
 0.0.0.0 searchpromo-pa.googleapis.com
 0.0.0.0 searchpromo-pa.googleapis.com
 0.0.0.0 secure.quantserve.com
 0.0.0.0 sentry.io
+0.0.0.0 shealth-analytics-api.samsunghealth.com
+=======
+0.0.0.0 sdk-03.moengage.com
+0.0.0.0 searchpromo-pa.googleapis.com
+0.0.0.0 searchpromo-pa.googleapis.com
+0.0.0.0 secure.quantserve.com
+>>>>>>> b97c4be88a5d17af9e9f5d6278692922f147eab9
 0.0.0.0 shealth-analytics-api.samsunghealth.com
 0.0.0.0 shealth-analytics-api.samsunghealth.com
 0.0.0.0 ssl.google-analytics.com
