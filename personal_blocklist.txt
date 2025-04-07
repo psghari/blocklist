@@ -1,8 +1,8 @@
-0.0.0.0 app-measurement.com
-0.0.0.0 beacons.gcp.gvt2.com
 0.0.0.0 firebaseinappmessaging.googleapis.com
 0.0.0.0 firebaselogging-pa.googleapis.com
 0.0.0.0 firebaseinstallations.googleapis.com
+0.0.0.0 app-measurement.com
+0.0.0.0 beacons.gcp.gvt2.com
 0.0.0.0 im.xo.pl
 0.0.0.0 date.ventivmedia.com
 0.0.0.0 ota.cartrawler.com
