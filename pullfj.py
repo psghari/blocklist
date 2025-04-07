@@ -1,9 +1,12 @@
 import requests
+import urllib3
 from pathlib import Path
 
 FJ_URL = "https://gitlab.com/fusionjack/adhell3-hosts/-/raw/master/hosts"
 ALLOWLIST_FILE = "allowlist.txt"
 SEED_OUTPUT = "fj_seed.txt"
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def load_allowlist():
     if not Path(ALLOWLIST_FILE).exists():
@@ -13,7 +16,7 @@ def load_allowlist():
 
 def fetch_fj():
     print("Fetching Fusionjack list...")
-    r = requests.get(FJ_URL, timeout=15)
+    r = requests.get(FJ_URL, timeout=15, verify=False)
     r.raise_for_status()
     lines = r.text.splitlines()
     domains = set()
