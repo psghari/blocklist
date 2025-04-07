@@ -19,3 +19,5 @@ package.airtel.tv
 events.airtel.tv
 livetv.airtel.tv
 sync.airtel.tv
+config.teams.microsoft.com
+teams.microsoft.com
