@@ -1,4 +1,3 @@
-domain
 mobile.events.data.microsoft.com
 mobile.events.data.microsoft.com
 mobile.pipe.aria.microsoft.com
