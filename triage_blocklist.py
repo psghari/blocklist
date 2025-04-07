@@ -7,8 +7,7 @@ import re
 NEXTDNS_LOG = "nextdns_log.txt"
 ALLOWLIST_FILE = "nextdns_allowlist.txt"
 SEED_LIST_FILE = "my_blocklist_seed.txt"
-FIREBASE_DOMAINS = [
-    "firebaseinstallations.googleapis.com",
+FIREBASE_DOMAINS = [,
     "firebaselogging-pa.googleapis.com",
     "firebase-settings.crashlytics.com",
     "crashlyticsreports-pa.googleapis.com",
