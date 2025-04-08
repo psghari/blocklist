@@ -69,3 +69,4 @@ us-rd.mcsvc.samsung.com
 us.mcsvc.samsung.com
 voilatile-pa.googleapis.com
 www.jiocloud.com
+www.omronconnect.com
