@@ -46,3 +46,14 @@
 0.0.0.0 auditrecording-pa.googleapis.com
 0.0.0.0 myphonenumbers-pa.googleapis.com
 0.0.0.0 voilatile-pa.googleapis.com
+0.0.0.0 analytics.samsungknox.com
+0.0.0.0 dc.dqa.samsung.com
+0.0.0.0 stc.samsungdis.com
+0.0.0.0 contile.services.mozilla.com
+0.0.0.0 cc-api-data.adobe.io
+0.0.0.0 dc-genai-access-provisioning-api.adobe.io
+0.0.0.0 adobecorp.data.adobedc.net
+0.0.0.0 icicibank-mid-prod4-all-t.adobe-campaign.com
+0.0.0.0 icicibank-mkt-prod4-lb.campaign.adobe.com
+0.0.0.0 lptag.liveperson.net
+0.0.0.0 opengraph.githubassets.com
